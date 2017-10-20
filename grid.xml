@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regression Suit2" thread-count="4" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.alpharooms.customelistener.Listner"></listener>
+	</listeners>
+	<test verbose="2" name="Windows-ChromeBrowser-Test">
+		<parameters>
+				<parameter name="browserName" value="chrome"></parameter>
+			<parameter name="remoteurl" value="http://192.168.0.7:5557/wd/hub"></parameter>
+		</parameters>
+		<classes>
+
+			<class name="com.alpharooms.testscripts.TC001_alphaRooms_MyAccount" />
+
+		</classes>
+	</test>
+	<test verbose="2" name="Windows-firefox-Test">
+		<parameters>
+			<parameter name="browserName" value="firefox"></parameter>
+			<parameter name="remoteurl" value="http://192.168.0.7:5557/wd/hub"></parameter>
+		</parameters>
+		<classes>
+			<class name="com.alpharooms.testscripts.TC001_alphaRooms_MyAccount" />
+		</classes>
+	</test>
+	<test verbose="2" name="Windows-IE-Test">
+		<parameters>
+					<parameter name="browserName" value="IE"></parameter>
+			<parameter name="remoteurl" value="http://192.168.0.7:5557/wd/hub"></parameter>
+		</parameters>
+		<classes>
+			<class name="com.alpharooms.testscripts.TC001_alphaRooms_MyAccount" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
